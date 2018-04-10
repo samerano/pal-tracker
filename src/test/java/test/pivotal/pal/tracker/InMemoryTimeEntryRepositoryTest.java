@@ -14,7 +14,7 @@ public class InMemoryTimeEntryRepositoryTest {
     @Test
     public void create() throws Exception {
         InMemoryTimeEntryRepository repo = new InMemoryTimeEntryRepository();
-        TimeEntry createdTimeEntry = repo.create(new TimeEntry(123L, 456L, LocalDate.parse("2017-01-08"), 8));
+        TimeEntry createdTimeEntry = repo.create(new TimeEntry(1L, 123L, 456L, LocalDate.parse("2017-01-08"), 8));
 
         TimeEntry expected = new TimeEntry(1L, 123L, 456L, LocalDate.parse("2017-01-08"), 8);
         assertThat(createdTimeEntry).isEqualTo(expected);
@@ -30,6 +30,8 @@ public class InMemoryTimeEntryRepositoryTest {
 
         TimeEntry expected = new TimeEntry(1L, 123L, 456L, LocalDate.parse("2017-01-08"), 8);
         TimeEntry readEntry = repo.find(1L);
+        readEntry.printMe();
+        expected.printMe();
         assertThat(readEntry).isEqualTo(expected);
     }
 
