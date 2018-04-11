@@ -27,7 +27,7 @@ public class InMemoryTimeEntryRepository  implements TimeEntryRepository {
 //    }
 
     public List list() {
-        if(mapTimeEntry.isEmpty()) return new ArrayList<>();
+        if(mapTimeEntry == null || mapTimeEntry.isEmpty()) return new ArrayList<>();
         List<TimeEntry> list = new ArrayList<TimeEntry>();
         for(TimeEntry entry: mapTimeEntry.values()) {
              list.add(entry);
