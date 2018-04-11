@@ -15,7 +15,7 @@ public class TimeEntryController {
 
     public TimeEntryController(TimeEntryRepository timeEntryRepository) {
         this.timeEntryRepository = timeEntryRepository;
-        timeEntryRepository.create(new TimeEntry(1L, 123L, 456L, LocalDate.parse("2017-01-08"), 8));
+       // timeEntryRepository.create(new TimeEntry(1L, 123L, 456L, LocalDate.parse("2017-01-08"), 8));
     }
 
     @PostMapping
