@@ -16,7 +16,7 @@ outputs:
 run:
   path: bash
   args:
-  -exc
+  - -exc
   - |
 
     export DEBIAN_FRONTEND="noninteractive"
